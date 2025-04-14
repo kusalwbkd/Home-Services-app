@@ -19,9 +19,8 @@ const SuggestedBussiness = ({businessDetails}:{businessDetails:Business}) => {
         const getCategorizedBussiness=async()=>{
           setLoading(true)
           try {
-            const response= await getBussinessByCategory({category}) 
+            const response= await getBussinessByCategory({category:category||'Plumbing'}) 
            setBusinessList(response.businessLists)
-           console.log("the result is",response);
            
           } catch (error) {
             console.log(error);

@@ -12,7 +12,7 @@ const MyBooking = () => {
 
     const{user}=useUser()
     const[loading,setLoading]=useState(false)
-    const[bookingHistory,setBookingHistory]=useState<BookingQueryItem[]>([])
+    const[bookingHistory,setBookingHistory]=useState<any>([])
     useEffect(()=>{
          user&& getUserBookingsData()
     },[user])
